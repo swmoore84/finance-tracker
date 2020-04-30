@@ -18,3 +18,7 @@
 <div id="results">
 
 </div>
+<% if !@tracked_stocks.empty? %>
+  <%= render 'shared/list' %>
+<% end %>
+
