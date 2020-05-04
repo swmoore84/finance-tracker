@@ -19,3 +19,9 @@
     </tbody>
   </table>
 </div>
+
+<% if !@tracked_stocks.empty? %>
+  <%= render 'shared/list' %>
+<% else %>
+  <p class="lead">This user is not following any stocks</p>
+<% end %>
