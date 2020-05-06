@@ -1,5 +1,9 @@
 <h1>My Portfolio</h1>
 
+<%= form_tag update_stocks_path, method: :post do %>
+  <%= submit_tag 'Update stock price' %>
+<% end %>
+
 <div class="search-area">
   <h3>Search Stocks</h3>
   <%= form_tag search_stock_path, remote: true, method: :get do %>

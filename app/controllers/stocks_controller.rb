@@ -19,4 +19,12 @@ class StocksController < ApplicationController
       redirect_to my_portfolio_path
     end
   end
+
+  def update
+    @stocks = Stock.all
+    @stocks.each do |stock|
+      Stock.update_price(stock.ticker)
+    end
+    redirect_to my_portfolio_path
+  end
 end
