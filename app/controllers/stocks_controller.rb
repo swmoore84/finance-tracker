@@ -1,8 +1,11 @@
 class StocksController < ApplicationController
 
   def search
+    # checking if the text box has input
     if params[:stock].present?
+      # calling the new_lookup method in the model with the params hash
       @stock = Stock.new_lookup(params[:stock])
+      # if stock successfully saved then render the partial
       if @stock
         respond_to do |format|
           format.js { render partial: 'users/result' }
